@@ -5,7 +5,6 @@ import { Button, IconButton, Tooltip } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { useHistory, useLocation } from 'react-router-dom';
 import SearchBar from './searchBar/SearchBar';
-import AddReceiptButton from '../expenses/addReceiptImg/AddReceiptButton';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -31,12 +30,13 @@ const UtilBar = () => {
     if (pathname.match('/expense/w*')) {
       return (
         <>
-          <AddReceiptButton />
+
           <Tooltip title="Search" placement="left">
             <IconButton onClick={() => history.push('/search')}>
               <SearchRoundedIcon />
             </IconButton>
           </Tooltip>{' '}
+
         </>
       );
     }
@@ -52,6 +52,7 @@ const UtilBar = () => {
     <div className={classes.container}>
       {renderBasedOnPathname()}
       <SortButton />
+
     </div>
   );
 };
