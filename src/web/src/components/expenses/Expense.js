@@ -4,6 +4,8 @@ import ImgTable from './expenseForms/ImgTable';
 import SplitTable from './expenseForms/SplitTable';
 import ReceiptTable from './expenseForms/ReceiptTable';
 import { Form, Formik, FieldArray } from 'formik';
+import AddReceiptButton from '../expenses/addReceiptImg/AddReceiptButton';
+import { colorChannel, width } from '@mui/system';
 
 const useStyles = makeStyles({
   container: {
@@ -11,6 +13,15 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     gap: '1em'
+  },
+  addReceiptButton: {
+    display: 'flex',
+    width: 'calc(100vw - 100px)',
+    justifyContent: 'flex-end'
+  },
+  imgTable:
+  {
+    width: 'calc(100vw - 100px)',
   }
 });
 
@@ -27,7 +38,12 @@ const Expense = () => {
   };
   return (
     <div className={classes.container}>
-      <ImgTable />
+      <div className={classes.imgTable}>
+        <ImgTable />
+      </div>
+      <div className={classes.addReceiptButton}>
+        <AddReceiptButton />
+      </div>
       <Formik initialValues={initialValues}>
         {({ values, handleChange, setFieldValue }) => (
           <Form>
