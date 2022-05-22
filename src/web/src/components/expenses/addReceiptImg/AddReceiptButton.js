@@ -23,12 +23,12 @@ const AddReceiptButton = () => {
         anchorEl={anchorEl}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'bottom',
+          vertical: 'top',
           horizontal: 'center'
         }}
         transformOrigin={{
-          vertical: 'top',
-          horizontal: 'right'
+          vertical: 'bottom',
+          horizontal: 'right',
         }}
       >
         <AddReceiptForm />
