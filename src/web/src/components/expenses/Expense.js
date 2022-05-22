@@ -17,11 +17,14 @@ const useStyles = makeStyles({
   addReceiptButton: {
     display: 'flex',
     width: 'calc(100vw - 100px)',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   imgTable:
   {
     width: 'calc(100vw - 100px)',
+    expenseForm: {
+      width: '100vw',
+    }
   }
 });
 
@@ -46,7 +49,7 @@ const Expense = () => {
       </div>
       <Formik initialValues={initialValues}>
         {({ values, handleChange, setFieldValue }) => (
-          <Form>
+          <Form className={classes.expenseForm}>
             <FieldArray name="receipt">
               {({ push, remove }) => {
                 const props = {

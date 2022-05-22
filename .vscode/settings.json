@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
@@ -13,3 +14,16 @@
       "editor.defaultFormatter": "vscode.typescript-language-features"
     }
   }
+=======
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "files.eol": "\n",
+  "files.insertFinalNewline": true
+}
+>>>>>>> master
