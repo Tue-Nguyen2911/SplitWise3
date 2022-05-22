@@ -5,7 +5,6 @@ import SplitTable from './expenseForms/SplitTable';
 import ReceiptTable from './expenseForms/ReceiptTable';
 import { Form, Formik, FieldArray } from 'formik';
 import AddReceiptButton from '../expenses/addReceiptImg/AddReceiptButton';
-import { colorChannel, width } from '@mui/system';
 
 const useStyles = makeStyles({
   container: {
@@ -17,13 +16,12 @@ const useStyles = makeStyles({
   addReceiptButton: {
     display: 'flex',
     width: 'calc(100vw - 100px)',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
-  imgTable:
-  {
+  imgTable: {
     width: 'calc(100vw - 100px)',
     expenseForm: {
-      width: '100vw',
+      width: '100vw'
     }
   }
 });
